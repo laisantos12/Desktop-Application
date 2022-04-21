@@ -1,5 +1,5 @@
 {
-  "name": "application_desktop",
+  "name": "desktop_application",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/laisantos12/Desktop-Application/issues"
   },
-  "homepage": "https://github.com/laisantos12/Desktop-Application#readme"
+  "homepage": "https://github.com/laisantos12/Desktop-Application#readme",
+  "devDependencies": {
+    "nw": "file:.44.1-sdk",
+    "nw-builder": "^3.5.7"
+  }
 }
