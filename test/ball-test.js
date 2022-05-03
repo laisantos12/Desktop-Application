@@ -1,16 +1,3 @@
-// var chai = require('chai');
-// var assert = chai.assert;
-
-// var Ball = require("../lib");
-
-// describe("Ball", function () {
-//     var ball = new Ball({});
-
-//     it("drawBall should be a function", function () {
-//         assert.isFunction(ball.drawBall);
-//     });
-// });
-
 var chai = require('chai');
 var assert = chai.assert;
 
