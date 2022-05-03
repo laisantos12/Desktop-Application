@@ -63,14 +63,5 @@ describe("Ball", function () {
         assert.equal(ball.space, false);
     });
 
-    // it("should move ball x position +5 and y position -5", function () {
-    //     var ball = new Ball({
-    //         space: true
-    //     });
-    //     assert.equal(ball.x, 100);
-    //     assert.equal(ball.y, 100);
-    //     ball.moveBall();
-    //     assert.equal(ball.x, 105);
-    //     assert.equal(ball.y, 95);
-    // });
+
 });
