@@ -14,7 +14,8 @@
     "min_heigh": 1000,
     "max_width": 1000,
     "max_heigh": 1000,
-    "position": "mouse"
+    "resizable": true,
+    "position": "center"
   },
   "keywords": [],
   "author": "",
