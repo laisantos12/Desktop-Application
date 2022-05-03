@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/laisantos12/Desktop-Application#readme",
   "devDependencies": {
-    "chai": "^4.3.6",
     "mocha": "^10.0.0",
     "nw": "file:.44.1-sdk",
     "nw-builder": "^3.5.7"
