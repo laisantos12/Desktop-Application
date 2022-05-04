@@ -1,4 +1,4 @@
-function Ball(options) {
+function Game(options) {
     this.paddle = options.gamePaddle;
     this.x = options.x || 100;
     this.y = options.y || 100;
@@ -11,7 +11,7 @@ function Ball(options) {
     this.space = options.space || false;
 }
 
-Ball.prototype.drawBall = function () {
+Game.prototype.drawBall = function () {
     this.context.beginPath();
     this.context.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
     this.context.closePath();
@@ -22,7 +22,7 @@ Ball.prototype.drawBall = function () {
 
 
 
-Ball.prototype.drawPaddle = function () {
+Game.prototype.drawPaddle = function () {
     ctx.beginPath();
     ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
     this.contextfillStyle = this.color;
@@ -31,12 +31,12 @@ Ball.prototype.drawPaddle = function () {
     ctx.closePath();
 };
 
-Ball.prototype.drawScore = function () {
+Game.prototype.drawScore = function () {
     ctx.font = '20px Arial';
     ctx.fillText(`Score: ${score}`, canvas.width - 100, 30);
 };
 
-Ball.prototype.drawBricks = function () {
+Game.prototype.drawBricks = function () {
     bricks.forEach(column => {
         column.forEach(brick => {
             ctx.beginPath();
@@ -48,7 +48,7 @@ Ball.prototype.drawBricks = function () {
     });
 }
 
-Ball.prototype.movePaddle = function () {
+Game.prototype.movePaddle = function () {
     paddle.x += paddle.dx;
     if (paddle.x + paddle.w > canvas.width) {
         paddle.x = canvas.width - paddle.w;
@@ -58,22 +58,14 @@ Ball.prototype.movePaddle = function () {
         paddle.x = 0;
     }
 }
-Ball.prototype.showAllBricks = function () {
+Game.prototype.showAllBricks = function () {
     bricks.forEach(column => {
         column.forEach(brick => (brick.visible = true));
     });
 }
 
-// Ball.prototype.resetBallAndPaddle = function () {
-//     this.speedX = 5;
-//     this.speedY = -5;
-//     this.x = this.canvas.width / 2;
-//     this.y = this.canvas.height - 25;
-//     this.paddle.x = this.canvas.width / 2 - 50;
-//     this.space = false;
-// };
 
-Ball.prototype.moveBall = function () {
+Game.prototype.moveBall = function () {
     ball.x += ball.dx;
     ball.y += ball.dy;
 
@@ -87,7 +79,6 @@ Ball.prototype.moveBall = function () {
         ball.dy *= -1;
     }
 
-    // console.log(ball.x, ball.y);
 
     // Paddle collision
     if (
@@ -124,7 +115,7 @@ Ball.prototype.moveBall = function () {
     }
 }
 
-Ball.prototype.increaseScore = function () {
+Game.prototype.increaseScore = function () {
     score++;
 
     if (score % (brickRowCount * brickRowCount) === 0) {
@@ -132,4 +123,4 @@ Ball.prototype.increaseScore = function () {
     }
 }
 
-module.exports = Ball;
+module.exports = Game;
